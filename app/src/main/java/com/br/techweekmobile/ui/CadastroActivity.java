@@ -142,4 +142,58 @@ public class CadastroActivity extends AppCompatActivity {
 
         return valido;
     }
+
+    private void salvarParticipante() {
+        setCarregando(true);
+
+        Participante p = new Participante();
+        p.setNome(getText(etNome));
+        p.setRa(getText(etRa));
+        p.setCurso(acCurso.getText().toString().trim());
+        p.setSerie(acSerie.getText().toString().trim());
+        p.setCoffeeBreak(cbCoffeeBreak.isChecked());
+
+        executor.execute(() -> {
+            try {
+
+                Participante existente = AppDatabase.getInstance(this)
+                        .participanteDao()
+                        .buscarPorRA(p.getRa());
+
+                if (existente != null) {
+                    runOnUiThread(() -> {
+                        setCarregando(false);
+                        tilRa.setError("Este RA já está cadastrado.");
+                    });
+                    return;
+                }
+
+                AppDatabase.getInstance(this).participanteDao().inserir(p);
+
+                runOnUiThread(() -> {
+                    setCarregando(false);
+                    Snackbar.make(btnCadastrar,
+                            "Cadastro realizado com sucesso!", Snackbar.LENGTH_LONG).show();
+                    limparFormulario();
+                });
+
+            } catch (Exception e) {
+                runOnUiThread(() -> {
+                    setCarregando(false);
+                    Snackbar.make(btnCadastrar,
+                            "Erro ao salvar cadastro. Tente novamente.", Snackbar.LENGTH_LONG).show();
+                });
+            }
+        });
+    }
+
+    private void limparFormulario() {
+        etNome.setText("");
+        etRa.setText("");
+        acCurso.setText("", false);
+        acSerie.setText("", false);
+        cbCoffeeBreak.setChecked(false);
+        tilNome.setError(null);
+        tilRa.setError(null);
+    }
 }
