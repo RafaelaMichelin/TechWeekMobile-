@@ -196,4 +196,37 @@ public class CadastroActivity extends AppCompatActivity {
         tilNome.setError(null);
         tilRa.setError(null);
     }
+
+    private void setCarregando(boolean carregando) {
+        progressBar.setVisibility(carregando ? View.VISIBLE : View.GONE);
+        btnCadastrar.setEnabled(!carregando);
+    }
+
+    private String getText(TextInputEditText et) {
+        return et.getText() != null ? et.getText().toString().trim() : "";
+    }
+
+
+    private TextWatcher criarWatcher(Runnable acao) {
+        return new TextWatcher() {
+            @Override public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+            @Override public void afterTextChanged(Editable s) {}
+            @Override public void onTextChanged(CharSequence s, int start, int before, int count) {
+                acao.run();
+            }
+        };
+    }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return true;
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if (executor != null && !executor.isShutdown()) executor.shutdown();
+    }
+}
 }
