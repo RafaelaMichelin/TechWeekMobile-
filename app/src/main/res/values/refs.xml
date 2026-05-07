@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <drawable name="bg_button_primary" />
+    <drawable name="bg_button_outline" />
+    <drawable name="bg_chip_active" />
+    <drawable name="bg_chip_inactive" />
+</resources>

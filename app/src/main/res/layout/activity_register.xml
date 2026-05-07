@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/textCadastro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cadastro de Participante"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:gravity="center"/>
+
+        <EditText
+            android:id="@+id/editNome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nome Completo"
+            android:layout_marginTop="20dp"/>
+
+        <EditText
+            android:id="@+id/editRA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="RA"
+            android:inputType="number"
+            android:layout_marginTop="12dp"/>
+        <EditText
+            android:id="@+id/editCurso"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Curso"
+            android:layout_marginTop="12dp"/>
+        <EditText
+            android:id="@+id/editSemestre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Semestre"
+            android:layout_marginTop="20dp"/>
+
+        <CheckBox
+            android:id="@+id/checkCoffee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Participar do Coffee Break?"
+            android:layout_marginTop="16dp"/>
+
+        <TextView
+            android:id="@+id/textProjeto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cadastro de Projeto (Opcional)"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="24dp"/>
+
+        <CheckBox
+            android:id="@+id/checkProjeto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Desejo apresentar um projeto"
+            android:layout_marginTop="12dp"/>
+
+        <EditText
+            android:id="@+id/editNomeProjeto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nome do Projeto"
+            android:layout_marginTop="12dp"/>
+
+        <EditText
+            android:id="@+id/editDescricaoProjeto"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:hint="Descrição do Projeto"
+            android:gravity="top"
+            android:inputType="textMultiLine"
+            android:layout_marginTop="12dp"/>
+
+        <Button
+            android:id="@+id/btnSalvar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Salvar Cadastro"
+            android:layout_marginTop="24dp"
+            android:backgroundTint="#1A0DAB"/>
+
+        <Button
+            android:id="@+id/btnVoltar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Voltar"
+            android:layout_marginTop="16dp"
+            android:layout_gravity="center"
+            android:onClick="voltarParaInicio"/>
+
+    </LinearLayout>
+
+</ScrollView>
