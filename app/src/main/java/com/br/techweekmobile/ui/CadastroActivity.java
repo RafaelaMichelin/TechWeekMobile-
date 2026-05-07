@@ -67,17 +67,17 @@ public class CadastroActivity extends AppCompatActivity {
     }
 
     private void bindViews() {
-        tilNome     = findViewById(R.id.til_nome);
-        tilRa       = findViewById(R.id.til_ra);
-        tilCurso    = findViewById(R.id.til_curso);
-        tilSerie    = findViewById(R.id.til_serie);
-        etNome      = findViewById(R.id.et_nome);
-        etRa        = findViewById(R.id.et_ra);
-        acCurso     = findViewById(R.id.ac_curso);
-        acSerie     = findViewById(R.id.ac_serie);
+        tilNome = findViewById(R.id.til_nome);
+        tilRa = findViewById(R.id.til_ra);
+        tilCurso = findViewById(R.id.til_curso);
+        tilSerie = findViewById(R.id.til_serie);
+        etNome = findViewById(R.id.et_nome);
+        etRa = findViewById(R.id.et_ra);
+        acCurso = findViewById(R.id.ac_curso);
+        acSerie = findViewById(R.id.ac_serie);
         cbCoffeeBreak = findViewById(R.id.cb_coffee_break);
-        btnCadastrar  = findViewById(R.id.btn_cadastrar);
-        progressBar   = findViewById(R.id.progress_cadastro);
+        btnCadastrar = findViewById(R.id.btn_cadastrar);
+        progressBar = findViewById(R.id.progress_cadastro);
     }
 
     private void configurarDropdowns() {
@@ -102,3 +102,44 @@ public class CadastroActivity extends AppCompatActivity {
         acCurso.setOnItemClickListener((p, v, pos, id) -> tilCurso.setError(null));
         acSerie.setOnItemClickListener((p, v, pos, id) -> tilSerie.setError(null));
     }
+
+
+    private void configurarBotaoCadastrar() {
+        btnCadastrar.setOnClickListener(v -> {
+            if (validarFormulario()) {
+                salvarParticipante();
+            }
+        });
+    }
+
+    private boolean validarFormulario() {
+        boolean valido = true;
+
+        String erroNome = ValidacaoUtils.mensagemErroNome(getText(etNome));
+        tilNome.setError(erroNome);
+        if (erroNome != null) valido = false;
+
+
+        String erroRa = ValidacaoUtils.mensagemErroRA(getText(etRa));
+        tilRa.setError(erroRa);
+        if (erroRa != null) valido = false;
+
+
+        if (acCurso.getText().toString().trim().isEmpty()) {
+            tilCurso.setError("Selecione um curso.");
+            valido = false;
+        } else {
+            tilCurso.setError(null);
+        }
+
+
+        if (acSerie.getText().toString().trim().isEmpty()) {
+            tilSerie.setError("Selecione uma série.");
+            valido = false;
+        } else {
+            tilSerie.setError(null);
+        }
+
+        return valido;
+    }
+}
