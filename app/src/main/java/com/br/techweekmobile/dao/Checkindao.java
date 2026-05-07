@@ -1,9 +1,11 @@
-package com.br.techweekmobile.ui;
+package com.br.techweekmobile.dao;
 
 import androidx.room.Dao;
 import androidx.room.Insert;
 import androidx.room.OnConflictStrategy;
 import androidx.room.Query;
+
+import com.br.techweekmobile.ui.CheckIn;
 
 import java.util.List;
 
