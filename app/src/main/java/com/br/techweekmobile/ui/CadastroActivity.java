@@ -39,7 +39,6 @@ public class CadastroActivity extends AppCompatActivity {
             "SI - Sistemas de Informação",
             "CC - Ciência da Computação",
             "BD - Banco de Dados",
-            "GE - Gestão Empresarial",
             "Outro"
     };
 
@@ -67,3 +66,39 @@ public class CadastroActivity extends AppCompatActivity {
         }
     }
 
+    private void bindViews() {
+        tilNome     = findViewById(R.id.til_nome);
+        tilRa       = findViewById(R.id.til_ra);
+        tilCurso    = findViewById(R.id.til_curso);
+        tilSerie    = findViewById(R.id.til_serie);
+        etNome      = findViewById(R.id.et_nome);
+        etRa        = findViewById(R.id.et_ra);
+        acCurso     = findViewById(R.id.ac_curso);
+        acSerie     = findViewById(R.id.ac_serie);
+        cbCoffeeBreak = findViewById(R.id.cb_coffee_break);
+        btnCadastrar  = findViewById(R.id.btn_cadastrar);
+        progressBar   = findViewById(R.id.progress_cadastro);
+    }
+
+    private void configurarDropdowns() {
+        acCurso.setAdapter(new ArrayAdapter<>(this,
+                android.R.layout.simple_dropdown_item_1line, CURSOS));
+        acSerie.setAdapter(new ArrayAdapter<>(this,
+                android.R.layout.simple_dropdown_item_1line, SERIES));
+    }
+
+    private void configurarValidacaoEmTempoReal() {
+        etNome.addTextChangedListener(criarWatcher(() -> {
+            String erro = ValidacaoUtils.mensagemErroNome(getText(etNome));
+            tilNome.setError(erro);
+        }));
+
+        etRa.addTextChangedListener(criarWatcher(() -> {
+            String erro = ValidacaoUtils.mensagemErroRA(getText(etRa));
+            tilRa.setError(erro);
+        }));
+
+
+        acCurso.setOnItemClickListener((p, v, pos, id) -> tilCurso.setError(null));
+        acSerie.setOnItemClickListener((p, v, pos, id) -> tilSerie.setError(null));
+    }
