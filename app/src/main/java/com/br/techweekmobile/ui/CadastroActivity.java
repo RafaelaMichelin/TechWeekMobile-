@@ -16,8 +16,9 @@ import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 import com.br.techweekmobile.R;
+import com.br.techweekmobile.ui.Participante;
+
 // import com.techweekmobile.mvp.data.database.AppDatabase;
-// import com.techweekmobile.mvp.data.entity.Participante;
 // import com.techweekmobile.mvp.logic.ValidacaoUtils;
 
 import java.util.concurrent.ExecutorService;
