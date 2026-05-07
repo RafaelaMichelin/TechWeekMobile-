@@ -9,7 +9,7 @@ import androidx.room.PrimaryKey;
         tableName = "participante",
         indices = {@Index(value = {"ra"}, unique = true)}
 )
-public class Participante {
+public class Participant {
 
     @PrimaryKey(autoGenerate = true)
     private long id;

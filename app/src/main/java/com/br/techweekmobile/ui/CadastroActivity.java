@@ -16,7 +16,6 @@ import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 import com.br.techweekmobile.R;
-import com.br.techweekmobile.ui.Participante;
 
 // import com.techweekmobile.mvp.data.database.AppDatabase;
 // import com.techweekmobile.mvp.logic.ValidacaoUtils;
@@ -147,7 +146,7 @@ public class CadastroActivity extends AppCompatActivity {
     private void salvarParticipante() {
         setCarregando(true);
 
-        Participante p = new Participante();
+        Participant p = new Participant();
         p.setNome(getText(etNome));
         p.setRa(getText(etRa));
         p.setCurso(acCurso.getText().toString().trim());
@@ -157,7 +156,7 @@ public class CadastroActivity extends AppCompatActivity {
         executor.execute(() -> {
             try {
 
-                Participante existente = AppDatabase.getInstance(this)
+                Participant existente = AppDatabase.getInstance(this)
                         .participanteDao()
                         .buscarPorRA(p.getRa());
 
