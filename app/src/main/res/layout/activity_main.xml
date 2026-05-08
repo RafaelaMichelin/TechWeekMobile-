@@ -10,7 +10,6 @@
         android:orientation="vertical">
 
         <!-- TOOLBAR -->
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -51,44 +50,6 @@
 
             </LinearLayout>
 
-            <!-- BOTÕES DIAS -->
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:orientation="horizontal">
-
-                <Button
-                    android:id="@+id/btnDia1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Dia 1"
-                    android:textAllCaps="false"
-                    android:backgroundTint="#FFFFFF"
-                    android:textColor="#1A0DAB"/>
-
-                <Button
-                    android:id="@+id/btnDia2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:text="Dia 2"
-                    android:textAllCaps="false"
-                    android:backgroundTint="#3D30C4"
-                    android:textColor="#FFFFFF"/>
-
-                <Button
-                    android:id="@+id/btnDia3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:text="Dia 3"
-                    android:textAllCaps="false"
-                    android:backgroundTint="#3D30C4"
-                    android:textColor="#FFFFFF"/>
-
-            </LinearLayout>
-
         </LinearLayout>
 
         <!-- CONTEÚDO -->
@@ -120,7 +81,7 @@
                         android:padding="6dp"
                         android:text="09:00 - 09:50"
                         android:textColor="#1A0DAB"
-                        android:textStyle="bold"/>
+                        android:textStyle="bold" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -129,7 +90,7 @@
                         android:background="#EEEEEE"
                         android:padding="6dp"
                         android:text="Auditório A"
-                        android:textColor="#666666"/>
+                        android:textColor="#666666" />
 
                 </LinearLayout>
 
@@ -140,7 +101,7 @@
                     android:text="Arquitetura Offline-First com Room e LiveData"
                     android:textColor="#111111"
                     android:textSize="16sp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -154,7 +115,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="Ariele Cohen"
-                        android:textColor="#555555"/>
+                        android:textColor="#555555" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -163,7 +124,7 @@
                         android:padding="6dp"
                         android:text="Android"
                         android:textColor="#1A0DAB"
-                        android:textStyle="bold"/>
+                        android:textStyle="bold" />
 
                 </LinearLayout>
 
@@ -191,7 +152,7 @@
                         android:padding="6dp"
                         android:text="10:00 - 10:50"
                         android:textColor="#1A0DAB"
-                        android:textStyle="bold"/>
+                        android:textStyle="bold" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -200,7 +161,7 @@
                         android:background="#EEEEEE"
                         android:padding="6dp"
                         android:text="Sala B"
-                        android:textColor="#666666"/>
+                        android:textColor="#666666" />
 
                 </LinearLayout>
 
@@ -211,7 +172,7 @@
                     android:text="Clean Architecture na Prática com Java"
                     android:textColor="#111111"
                     android:textSize="16sp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -225,7 +186,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="Rafaela Michelin"
-                        android:textColor="#555555"/>
+                        android:textColor="#555555" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -234,73 +195,84 @@
                         android:padding="6dp"
                         android:text="Backend"
                         android:textColor="#0A6640"
-                        android:textStyle="bold"/>
+                        android:textStyle="bold" />
 
                 </LinearLayout>
 
             </LinearLayout>
-            <!--card 3 -->
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
 
-                <TextView
+            <!-- CARD 3 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:background="#FFFFFF"
+                android:elevation="2dp"
+                android:orientation="vertical"
+                android:padding="14dp">
+
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="#EEF0FF"
-                    android:padding="6dp"
-                    android:text="12:00 - 12:50"
-                    android:textColor="#1A0DAB"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#EEF0FF"
+                        android:padding="6dp"
+                        android:text="12:00 - 12:50"
+                        android:textColor="#1A0DAB"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:background="#EEEEEE"
+                        android:padding="6dp"
+                        android:text="Auditório C"
+                        android:textColor="#666666" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="Mysql para iniciantes"
+                    android:textColor="#111111"
+                    android:textSize="16sp"
                     android:textStyle="bold" />
 
-                <TextView
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:background="#EEEEEE"
-                    android:padding="6dp"
-                    android:text="Auditório C"
-                    android:textColor="#666666"/>
+                    android:layout_marginTop="12dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Renan Ber"
+                        android:textColor="#555555" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#EEF0FF"
+                        android:padding="6dp"
+                        android:text="Banco de Dados"
+                        android:textColor="#1A0DAB"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
 
             </LinearLayout>
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                android:text="Mysql para iniciantes"
-                android:textColor="#111111"
-                android:textSize="16sp"
-                android:textStyle="bold"/>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                android:gravity="center_vertical"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Renan Ber"
-                    android:textColor="#555555"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="#EEF0FF"
-                    android:padding="6dp"
-                    android:text="Banco de Dados"
-                    android:textColor="#1A0DAB"
-                    android:textStyle="bold"/>
-
-            </LinearLayout>
-
-
-            <!-- Menu principal -->
+            <!-- MENU -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -310,8 +282,6 @@
                 android:textColor="#111111"
                 android:textSize="18sp"
                 android:textStyle="bold" />
-
-
 
             <Button
                 android:id="@+id/btn_cadastro"
@@ -333,34 +303,20 @@
                 android:textAllCaps="false"
                 android:textColor="#FFFFFF" />
 
-            <!-- BOTÃO -->
-            <Button
-                android:id="@+id/btnFavoritos"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:backgroundTint="#1A0DAB"
-                android:text="Ver Favoritos"
-                android:textAllCaps="false"
-                android:textColor="#FFFFFF"/>
 
-            <!-- BOTÃO LOCALIZAÇÃO -->
             <Button
                 android:id="@+id/btn_localizacao"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
                 android:layout_marginBottom="16dp"
                 android:backgroundTint="#1A0DAB"
                 android:text="Ver Localização do Evento"
                 android:textAllCaps="false"
-                android:textColor="#FFFFFF"/>
-
-
+                android:textColor="#FFFFFF" />
 
         </LinearLayout>
 
-
     </LinearLayout>
-
 
 </ScrollView>
