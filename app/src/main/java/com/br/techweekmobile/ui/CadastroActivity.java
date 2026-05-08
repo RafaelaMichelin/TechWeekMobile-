@@ -1,5 +1,6 @@
 package com.br.techweekmobile.ui;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextWatcher;
 import android.text.Editable;
@@ -171,9 +172,9 @@ public class CadastroActivity extends AppCompatActivity {
 
                 runOnUiThread(() -> {
                     setCarregando(false);
-                    Snackbar.make(btnCadastrar,
-                            "Cadastro realizado com sucesso!", Snackbar.LENGTH_LONG).show();
-                    limparFormulario();
+                    Intent intent = new Intent(CadastroActivity.this, ProgramacaoActivity.class);
+                    startActivity(intent);
+                    finish();
                 });
 
             } catch (Exception e) {
