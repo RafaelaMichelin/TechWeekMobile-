@@ -28,4 +28,7 @@ public interface ParticipantDao {
 
     @Query("SELECT * FROM participant WHERE ra = :ra LIMIT 1")
     Participant findByRa(String ra);
+
+    @Query("SELECT * FROM participant WHERE coffee_break = 1")
+    List<Participant> getCoffeeBreakParticipants();
 }
