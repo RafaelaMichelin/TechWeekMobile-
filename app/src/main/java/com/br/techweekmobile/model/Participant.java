@@ -2,28 +2,78 @@ package com.br.techweekmobile.model;
 
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
+import androidx.room.Index;
 import androidx.room.PrimaryKey;
 
-@Entity(tableName = "participant")
+@Entity(
+        tableName = "participant",
+        indices = {@Index(value = "ra", unique = true)}
+)
 public class Participant {
 
-    //Primary Key
     @PrimaryKey(autoGenerate = true)
-    private int id;
-    //ColumnInfo para nomear no banco
-    @ColumnInfo(name = "name")
-    public String name;
+    private long id;
+
+    @ColumnInfo(name = "nome")
+    private String nome;
 
     @ColumnInfo(name = "ra")
-    public String ra;
+    private String ra;
 
-    @ColumnInfo(name = "course")
-    public String course;
+    @ColumnInfo(name = "curso")
+    private String curso;
 
-    @ColumnInfo(name = "semester")
-    public int semester;
+    @ColumnInfo(name = "serie")
+    private String serie;
 
-    @ColumnInfo(name = "participanteCoffe")
-    public boolean participanteCoffe;
+    @ColumnInfo(name = "coffee_break")
+    private boolean coffeeBreak;
 
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getRa() {
+        return ra;
+    }
+
+    public void setRa(String ra) {
+        this.ra = ra;
+    }
+
+    public String getCurso() {
+        return curso;
+    }
+
+    public void setCurso(String curso) {
+        this.curso = curso;
+    }
+
+    public String getSerie() {
+        return serie;
+    }
+
+    public void setSerie(String serie) {
+        this.serie = serie;
+    }
+
+    public boolean isCoffeeBreak() {
+        return coffeeBreak;
+    }
+
+    public void setCoffeeBreak(boolean coffeeBreak) {
+        this.coffeeBreak = coffeeBreak;
+    }
 }

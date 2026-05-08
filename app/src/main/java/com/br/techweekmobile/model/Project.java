@@ -28,5 +28,5 @@ public class Project {
     public String description;
 
     @ColumnInfo(name = "participant_id")
-    public int participantId;
+    public long participantId;
 }

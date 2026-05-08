@@ -11,6 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.TechWeekMobile">
+
         <activity
             android:name=".ui.MainActivity"
             android:exported="true">
@@ -20,6 +21,34 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".ui.CadastroActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.CheckInActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.ProgramacaoActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.PalestrantesActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.FaqActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.LocalizacaoActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.AdminActivity"
+            android:exported="false" />
     </application>
 
 </manifest>

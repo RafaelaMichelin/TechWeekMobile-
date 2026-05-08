@@ -16,9 +16,8 @@ import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 import com.br.techweekmobile.R;
-
-// import com.techweekmobile.mvp.data.database.AppDatabase;
-// import com.techweekmobile.mvp.logic.ValidacaoUtils;
+import com.br.techweekmobile.database.AppDatabase;
+import com.br.techweekmobile.model.Participant;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -157,8 +156,8 @@ public class CadastroActivity extends AppCompatActivity {
             try {
 
                 Participant existente = AppDatabase.getInstance(this)
-                        .participanteDao()
-                        .buscarPorRA(p.getRa());
+                        .participantDao()
+                        .findByRa(p.getRa());
 
                 if (existente != null) {
                     runOnUiThread(() -> {
@@ -168,7 +167,7 @@ public class CadastroActivity extends AppCompatActivity {
                     return;
                 }
 
-                AppDatabase.getInstance(this).participanteDao().inserir(p);
+                AppDatabase.getInstance(this).participantDao().insert(p);
 
                 runOnUiThread(() -> {
                     setCarregando(false);
@@ -219,7 +218,7 @@ public class CadastroActivity extends AppCompatActivity {
 
     @Override
     public boolean onSupportNavigateUp() {
-        onBackPressed();
+        getOnBackPressedDispatcher().onBackPressed();
         return true;
     }
 
@@ -228,5 +227,4 @@ public class CadastroActivity extends AppCompatActivity {
         super.onDestroy();
         if (executor != null && !executor.isShutdown()) executor.shutdown();
     }
-}
 }

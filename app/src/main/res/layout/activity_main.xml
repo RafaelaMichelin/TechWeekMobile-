@@ -300,6 +300,39 @@
             </LinearLayout>
 
 
+            <!-- Menu principal -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="Menu"
+                android:textColor="#111111"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+
+
+            <Button
+                android:id="@+id/btn_cadastro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="#3D30C4"
+                android:text="Cadastro"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF" />
+
+            <Button
+                android:id="@+id/btn_admin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="#3D30C4"
+                android:text="Admin"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF" />
+
             <!-- BOTÃO -->
             <Button
                 android:id="@+id/btnFavoritos"
@@ -313,7 +346,7 @@
 
             <!-- BOTÃO LOCALIZAÇÃO -->
             <Button
-                android:id="@+id/btnLocalizacao"
+                android:id="@+id/btn_localizacao"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"

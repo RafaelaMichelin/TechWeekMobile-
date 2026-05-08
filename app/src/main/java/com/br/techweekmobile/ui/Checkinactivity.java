@@ -10,12 +10,9 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
+import com.br.techweekmobile.R;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.textfield.TextInputLayout;
-import com.br.techweekmobile.R;
-import com.br.techweekmobile.ui.Checkinmanager;
-import com.br.techweekmobile.ui.ValidacaoUtils;
-
 
 public class CheckInActivity extends AppCompatActivity {
 
@@ -55,7 +52,6 @@ public class CheckInActivity extends AppCompatActivity {
         btnConfirmar.setOnClickListener(v -> {
             String ra = etRa.getText().toString().trim();
 
-
             String erroRa = ValidacaoUtils.mensagemErroRA(ra);
             if (erroRa != null) {
                 tilRa.setError(erroRa);
@@ -66,10 +62,13 @@ public class CheckInActivity extends AppCompatActivity {
             iniciarCheckIn(ra);
         });
 
-
         etRa.addTextChangedListener(new android.text.TextWatcher() {
-            @Override public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
-            @Override public void afterTextChanged(android.text.Editable s) {}
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+
+            @Override
+            public void afterTextChanged(android.text.Editable s) {}
+
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 tilRa.setError(null);
@@ -119,7 +118,7 @@ public class CheckInActivity extends AppCompatActivity {
 
     @Override
     public boolean onSupportNavigateUp() {
-        onBackPressed();
+        getOnBackPressedDispatcher().onBackPressed();
         return true;
     }
 

@@ -8,13 +8,12 @@ import androidx.room.Query;
 import androidx.room.Update;
 
 import com.br.techweekmobile.model.Participant;
-import com.br.techweekmobile.model.Speaker;
 
 import java.util.List;
 
 @Dao
 public interface ParticipantDao {
-    //Inserir um participante no Banco
+
     @Insert
     void insert(Participant participant);
 
@@ -24,11 +23,9 @@ public interface ParticipantDao {
     @Delete
     void delete(Participant participant);
 
-    //Busca todos os registros da tabela participant
     @Query("SELECT * FROM participant")
     LiveData<List<Participant>> getAll();
 
-
-
+    @Query("SELECT * FROM participant WHERE ra = :ra LIMIT 1")
+    Participant findByRa(String ra);
 }
-
