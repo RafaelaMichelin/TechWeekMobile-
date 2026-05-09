@@ -36,10 +36,7 @@ public class CadastroActivity extends AppCompatActivity {
 
     private static final String[] CURSOS = {
             "ADS - Análise e Desenvolvimento de Sistemas",
-            "SI - Sistemas de Informação",
-            "CC - Ciência da Computação",
-            "BD - Banco de Dados",
-            "Outro"
+            "Engenharia de Software"
     };
 
     private static final String[] SERIES = {
