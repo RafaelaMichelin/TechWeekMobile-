@@ -14,7 +14,7 @@ import com.br.techweekmobile.R;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.textfield.TextInputLayout;
 
-public class CheckInActivity extends AppCompatActivity {
+public class Checkinactivity extends AppCompatActivity {
 
     private TextInputLayout tilRa;
     private EditText etRa;
@@ -22,14 +22,14 @@ public class CheckInActivity extends AppCompatActivity {
     private ProgressBar progressBar;
     private TextView tvStatus;
 
-    private CheckInManager checkInManager;
+    private Checkinmanager checkInManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_check_in);
 
-        checkInManager = new CheckInManager(this);
+        checkInManager = new Checkinmanager(this);
 
         bindViews();
         configurarBotao();
@@ -80,7 +80,7 @@ public class CheckInActivity extends AppCompatActivity {
         setCarregando(true);
         tvStatus.setVisibility(View.GONE);
 
-        checkInManager.realizarCheckIn(ra, new CheckInManager.CheckInCallback() {
+        checkInManager.realizarCheckIn(ra, new Checkinmanager.CheckInCallback() {
             @Override
             public void onSucesso(String mensagem) {
                 runOnUiThread(() -> {

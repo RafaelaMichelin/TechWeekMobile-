@@ -10,7 +10,7 @@ import com.br.techweekmobile.model.Checkin;
 import java.util.List;
 
 @Dao
-public interface CheckInDao {
+public interface Checkindao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     long insert(Checkin checkin);

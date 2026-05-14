@@ -10,7 +10,7 @@ import com.br.techweekmobile.dao.ParticipantDao;
 import com.br.techweekmobile.dao.ProjectDao;
 import com.br.techweekmobile.dao.SpeakerDao;
 import com.br.techweekmobile.dao.TalkDao;
-import com.br.techweekmobile.dao.CheckInDao;
+import com.br.techweekmobile.dao.Checkindao;
 import com.br.techweekmobile.model.Checkin;
 import com.br.techweekmobile.model.Participant;
 import com.br.techweekmobile.model.Project;
@@ -39,7 +39,7 @@ public abstract class AppDatabase extends RoomDatabase {
 
     public abstract TalkDao talkDao();
 
-    public abstract CheckInDao checkInDao();
+    public abstract Checkindao checkInDao();
 
     public static AppDatabase getInstance(Context context) {
         if (instance == null) {

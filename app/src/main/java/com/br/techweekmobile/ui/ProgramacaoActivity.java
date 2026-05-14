@@ -23,7 +23,7 @@ public class ProgramacaoActivity extends AppCompatActivity {
     }
 
     private void abrirCheckIn() {
-        Intent intent = new Intent(this, CheckInActivity.class);
+        Intent intent = new Intent(this, Checkinactivity.class);
         startActivity(intent);
     }
 

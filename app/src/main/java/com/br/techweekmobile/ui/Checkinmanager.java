@@ -9,7 +9,7 @@ import com.br.techweekmobile.model.Participant;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-public class CheckInManager {
+public class Checkinmanager {
 
     private final Context appContext;
     private final ExecutorService executor = Executors.newSingleThreadExecutor();
@@ -20,7 +20,7 @@ public class CheckInManager {
         void onErro(String mensagem);
     }
 
-    public CheckInManager(Context context) {
+    public Checkinmanager(Context context) {
         this.appContext = context.getApplicationContext();
     }
 
