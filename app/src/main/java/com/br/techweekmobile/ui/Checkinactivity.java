@@ -18,7 +18,7 @@ public class Checkinactivity extends AppCompatActivity {
 
     private TextInputLayout tilRa;
     private EditText etRa;
-    private Button btnConfirmar;
+    private Button btnConfirmar, btnVoltar;
     private ProgressBar progressBar;
     private TextView tvStatus;
 
@@ -39,6 +39,7 @@ public class Checkinactivity extends AppCompatActivity {
         tilRa = findViewById(R.id.til_ra_checkin);
         etRa = findViewById(R.id.et_ra_checkin);
         btnConfirmar = findViewById(R.id.btn_confirmar_checkin);
+        btnVoltar = findViewById(R.id.btn_voltar_programacao);
         progressBar = findViewById(R.id.progress_checkin);
         tvStatus = findViewById(R.id.tv_status_checkin);
 
@@ -61,6 +62,8 @@ public class Checkinactivity extends AppCompatActivity {
             tilRa.setError(null);
             iniciarCheckIn(ra);
         });
+
+        btnVoltar.setOnClickListener(v -> finish());
 
         etRa.addTextChangedListener(new android.text.TextWatcher() {
             @Override

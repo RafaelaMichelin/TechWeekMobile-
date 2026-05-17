@@ -35,8 +35,19 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_participants_coffee"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:clipToPadding="false"
         android:padding="8dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_voltar_admin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:backgroundTint="#1A0DAB"
+        android:text="Voltar para Início"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF" />
 
 </LinearLayout>

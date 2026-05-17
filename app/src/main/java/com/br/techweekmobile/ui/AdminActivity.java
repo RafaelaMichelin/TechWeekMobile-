@@ -2,6 +2,8 @@ package com.br.techweekmobile.ui;
 
 import android.os.Bundle;
 
+import android.widget.Button;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -18,6 +20,7 @@ public class AdminActivity extends AppCompatActivity {
 
     private RecyclerView rvParticipants;
     private CoffeeParticipantAdapter adapter;
+    private Button btnVoltar;
     private final ExecutorService executor = Executors.newSingleThreadExecutor();
 
     @Override
@@ -35,6 +38,9 @@ public class AdminActivity extends AppCompatActivity {
         
         adapter = new CoffeeParticipantAdapter();
         rvParticipants.setAdapter(adapter);
+
+        btnVoltar = findViewById(R.id.btn_voltar_admin);
+        btnVoltar.setOnClickListener(v -> finish());
 
         carregarParticipantesCoffee();
     }
