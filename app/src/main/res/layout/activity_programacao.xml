@@ -62,7 +62,7 @@
                         android:layout_height="wrap_content"
                         android:background="#EEF0FF"
                         android:padding="6dp"
-                        android:text="09:00 - 09:50"
+                        android:text="01/06 - 19:15"
                         android:textColor="#1A0DAB"
                         android:textStyle="bold" />
 
@@ -72,7 +72,7 @@
                         android:layout_marginStart="8dp"
                         android:background="#EEEEEE"
                         android:padding="6dp"
-                        android:text="Auditório A"
+                        android:text="Auditório"
                         android:textColor="#666666" />
 
                 </LinearLayout>
@@ -81,7 +81,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="12dp"
-                    android:text="Arquitetura Offline-First com Room e LiveData"
+                    android:text="Pense com IA: A Revolução da Inteligência ampliada"
                     android:textColor="#111111"
                     android:textSize="16sp"
                     android:textStyle="bold" />
@@ -97,7 +97,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Ariele Cohen"
+                        android:text="Gustavo Melles"
                         android:textColor="#555555" />
 
                     <TextView
@@ -105,7 +105,7 @@
                         android:layout_height="wrap_content"
                         android:background="#EEF0FF"
                         android:padding="6dp"
-                        android:text="Android"
+                        android:text="Inteligência Artificial"
                         android:textColor="#1A0DAB"
                         android:textStyle="bold" />
 
@@ -143,7 +143,7 @@
                         android:layout_height="wrap_content"
                         android:background="#EEF0FF"
                         android:padding="6dp"
-                        android:text="10:00 - 10:50"
+                        android:text="01/06 - 20:30"
                         android:textColor="#1A0DAB"
                         android:textStyle="bold" />
 
@@ -153,7 +153,7 @@
                         android:layout_marginStart="8dp"
                         android:background="#EEEEEE"
                         android:padding="6dp"
-                        android:text="Sala B"
+                        android:text="Auditório"
                         android:textColor="#666666" />
 
                 </LinearLayout>
@@ -162,7 +162,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="12dp"
-                    android:text="Clean Architecture na Prática com Java"
+                    android:text="Os Data Taggers e o Trabalho Invisível por trás da Inteligência Artificial"
                     android:textColor="#111111"
                     android:textSize="16sp"
                     android:textStyle="bold" />
@@ -178,7 +178,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Rafaela Michelin"
+                        android:text="Jessy Borges Ferracioli"
                         android:textColor="#555555" />
 
                     <TextView
@@ -186,7 +186,7 @@
                         android:layout_height="wrap_content"
                         android:background="#E6FAF2"
                         android:padding="6dp"
-                        android:text="Backend"
+                        android:text="Inteligência Artificial"
                         android:textColor="#0A6640"
                         android:textStyle="bold" />
 
@@ -224,7 +224,7 @@
                         android:layout_height="wrap_content"
                         android:background="#EEF0FF"
                         android:padding="6dp"
-                        android:text="12:00 - 12:50"
+                        android:text="02/06 - 19:15"
                         android:textColor="#1A0DAB"
                         android:textStyle="bold" />
 
@@ -234,7 +234,7 @@
                         android:layout_marginStart="8dp"
                         android:background="#EEEEEE"
                         android:padding="6dp"
-                        android:text="Auditório C"
+                        android:text="Auditório"
                         android:textColor="#666666" />
 
                 </LinearLayout>
@@ -243,7 +243,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="12dp"
-                    android:text="Mysql para iniciantes"
+                    android:text="Construção e Orquestração de Agentes de IA"
                     android:textColor="#111111"
                     android:textSize="16sp"
                     android:textStyle="bold" />
@@ -259,7 +259,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Renan Ber"
+                        android:text="Luciano Soler"
                         android:textColor="#555555" />
 
                     <TextView
@@ -267,7 +267,7 @@
                         android:layout_height="wrap_content"
                         android:background="#EEF0FF"
                         android:padding="6dp"
-                        android:text="Banco de Dados"
+                        android:text="Inteligência Artificial"
                         android:textColor="#1A0DAB"
                         android:textStyle="bold" />
 
@@ -275,6 +275,166 @@
 
                 <Button
                     android:id="@+id/btn_participar_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:backgroundTint="#3D30C4"
+                    android:text="Participar"
+                    android:textAllCaps="false"
+                    android:textColor="#FFFFFF" />
+
+            </LinearLayout>
+        <!--- CARD 4 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:background="#FFFFFF"
+                android:elevation="2dp"
+                android:orientation="vertical"
+                android:padding="14dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#EEF0FF"
+                        android:padding="6dp"
+                        android:text="02/06 - 20:30"
+                        android:textColor="#1A0DAB"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:background="#EEEEEE"
+                        android:padding="6dp"
+                        android:text="Auditório"
+                        android:textColor="#666666" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="O Programador morreu. Vida longa ao Programador"
+                    android:textColor="#111111"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Michel Cesar Leme Banaggiuro"
+                        android:textColor="#555555" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#EEF0FF"
+                        android:padding="6dp"
+                        android:text="Inteligência Artificial"
+                        android:textColor="#1A0DAB"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btn_participar_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:backgroundTint="#3D30C4"
+                    android:text="Participar"
+                    android:textAllCaps="false"
+                    android:textColor="#FFFFFF" />
+
+            </LinearLayout>
+            <!-- CARD 5 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:background="#FFFFFF"
+                android:elevation="2dp"
+                android:orientation="vertical"
+                android:padding="14dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#EEF0FF"
+                        android:padding="6dp"
+                        android:text="03/06 - 19:15"
+                        android:textColor="#1A0DAB"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:background="#EEEEEE"
+                        android:padding="6dp"
+                        android:text="Auditório"
+                        android:textColor="#666666" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="Inteligência Artificial e Proteção de Dados: Desafios, Ética e Segurança na era Digital."
+                    android:textColor="#111111"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Luiz Fernando Pereira Nunes"
+                        android:textColor="#555555" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#EEF0FF"
+                        android:padding="6dp"
+                        android:text="Inteligência Artificial"
+                        android:textColor="#1A0DAB"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btn_participar_5"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="12dp"

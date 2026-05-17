@@ -52,221 +52,434 @@
 
         </LinearLayout>
 
+        <!-- SELEÇÃO DE DIAS -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:elevation="4dp"
+            android:orientation="horizontal"
+            android:padding="4dp">
+
+            <Button
+                android:id="@+id/btn_dia1"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Dia 1"
+                android:textAllCaps="false"
+                android:textColor="#1A0DAB"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btn_dia2"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Dia 2"
+                android:textAllCaps="false"
+                android:textColor="#666666" />
+
+            <Button
+                android:id="@+id/btn_dia3"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Dia 3"
+                android:textAllCaps="false"
+                android:textColor="#666666" />
+
+        </LinearLayout>
+
         <!-- CONTEÚDO -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:padding="12dp">
-
-            <!-- CARD 1 -->
+            <!-- DIA 1 -->
             <LinearLayout
+                android:id="@+id/container_dia1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="12dp"
-                android:background="#FFFFFF"
-                android:elevation="2dp"
                 android:orientation="vertical"
-                android:padding="14dp">
+                android:visibility="visible">
 
+                <!-- CARD 1 - DIA 1 -->
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:layout_marginBottom="12dp"
+                    android:background="#FFFFFF"
+                    android:elevation="2dp"
+                    android:orientation="vertical"
+                    android:padding="14dp">
 
-                    <TextView
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:background="#EEF0FF"
-                        android:padding="6dp"
-                        android:text="09:00 - 09:50"
-                        android:textColor="#1A0DAB"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="#EEF0FF"
+                            android:padding="6dp"
+                            android:text="01/06 - 19:15"
+                            android:textColor="#1A0DAB"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:background="#EEEEEE"
+                            android:padding="6dp"
+                            android:text="Auditório"
+                            android:textColor="#666666" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="Pense com IA: A Revolução da Inteligência ampliada"
+                        android:textColor="#111111"
+                        android:textSize="16sp"
                         android:textStyle="bold" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="8dp"
-                        android:background="#EEEEEE"
-                        android:padding="6dp"
-                        android:text="Auditório A"
-                        android:textColor="#666666" />
+                        android:layout_marginTop="12dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Gustavo Melles"
+                            android:textColor="#555555" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="#EEF0FF"
+                            android:padding="6dp"
+                            android:text="Inteligência Artificial"
+                            android:textColor="#1A0DAB"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
 
                 </LinearLayout>
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
-                    android:text="Arquitetura Offline-First com Room e LiveData"
-                    android:textColor="#111111"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
-
+                <!-- CARD 2 - DIA 1 -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal">
+                    android:layout_marginBottom="12dp"
+                    android:background="#FFFFFF"
+                    android:elevation="2dp"
+                    android:orientation="vertical"
+                    android:padding="14dp">
 
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Ariele Cohen"
-                        android:textColor="#555555" />
-
-                    <TextView
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:background="#EEF0FF"
-                        android:padding="6dp"
-                        android:text="Android"
-                        android:textColor="#1A0DAB"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="#EEF0FF"
+                            android:padding="6dp"
+                            android:text="01/06 - 20:30"
+                            android:textColor="#1A0DAB"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:background="#EEEEEE"
+                            android:padding="6dp"
+                            android:text="Auditório"
+                            android:textColor="#666666" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="Os Data Taggers e o Trabalho Invisível por trás da IA"
+                        android:textColor="#111111"
+                        android:textSize="16sp"
                         android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Jessy Borges Ferracioli"
+                            android:textColor="#555555" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="#E6FAF2"
+                            android:padding="6dp"
+                            android:text="Inteligência Artificial"
+                            android:textColor="#0A6640"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
 
                 </LinearLayout>
 
             </LinearLayout>
 
-            <!-- CARD 2 -->
+            <!-- DIA 2 -->
             <LinearLayout
+                android:id="@+id/container_dia2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="12dp"
-                android:background="#FFFFFF"
-                android:elevation="2dp"
                 android:orientation="vertical"
-                android:padding="14dp">
+                android:visibility="gone">
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="#EEF0FF"
-                        android:padding="6dp"
-                        android:text="10:00 - 10:50"
-                        android:textColor="#1A0DAB"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="8dp"
-                        android:background="#EEEEEE"
-                        android:padding="6dp"
-                        android:text="Sala B"
-                        android:textColor="#666666" />
-
-                </LinearLayout>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
-                    android:text="Clean Architecture na Prática com Java"
-                    android:textColor="#111111"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
-
+                <!-- CARD 1 DIA 2 -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal">
+                    android:layout_marginBottom="12dp"
+                    android:background="#FFFFFF"
+                    android:elevation="2dp"
+                    android:orientation="vertical"
+                    android:padding="14dp">
 
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Rafaela Michelin"
-                        android:textColor="#555555" />
-
-                    <TextView
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:background="#E6FAF2"
-                        android:padding="6dp"
-                        android:text="Backend"
-                        android:textColor="#0A6640"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="#EEF0FF"
+                            android:padding="6dp"
+                            android:text="02/06 - 19:15"
+                            android:textColor="#1A0DAB"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:background="#EEEEEE"
+                            android:padding="6dp"
+                            android:text="Auditório"
+                            android:textColor="#666666" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="Construção e Orquestração de Agentes de IA"
+                        android:textColor="#111111"
+                        android:textSize="16sp"
                         android:textStyle="bold" />
 
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Luciano Soler"
+                            android:textColor="#555555" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="#EEF0FF"
+                            android:padding="6dp"
+                            android:text="Inteligência Artificial"
+                            android:textColor="#1A0DAB"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
                 </LinearLayout>
+                <!-- CARD 2 - DIA 2 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:background="#FFFFFF"
+                    android:elevation="2dp"
+                    android:orientation="vertical"
+                    android:padding="14dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="#EEF0FF"
+                            android:padding="6dp"
+                            android:text="02/06 - 20:30"
+                            android:textColor="#1A0DAB"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:background="#EEEEEE"
+                            android:padding="6dp"
+                            android:text="Auditório"
+                            android:textColor="#666666" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="O Programador morreu. Vida longa ao Programador"
+                        android:textColor="#111111"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Michel Cesar Leme Banaggiuro"
+                            android:textColor="#555555" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="#E6FAF2"
+                            android:padding="6dp"
+                            android:text="Inteligência Artificial"
+                            android:textColor="#0A6640"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
 
             </LinearLayout>
 
-            <!-- CARD 3 -->
+
+            </LinearLayout>
+
+            <!--  DIA 3 -->
             <LinearLayout
+                android:id="@+id/container_dia3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="12dp"
-                android:background="#FFFFFF"
-                android:elevation="2dp"
                 android:orientation="vertical"
-                android:padding="14dp">
+                android:visibility="gone">
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="#EEF0FF"
-                        android:padding="6dp"
-                        android:text="12:00 - 12:50"
-                        android:textColor="#1A0DAB"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="8dp"
-                        android:background="#EEEEEE"
-                        android:padding="6dp"
-                        android:text="Auditório C"
-                        android:textColor="#666666" />
-
-                </LinearLayout>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
-                    android:text="Mysql para iniciantes"
-                    android:textColor="#111111"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
-
+                <!-- CARD DIA 3 -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal">
+                    android:layout_marginBottom="12dp"
+                    android:background="#FFFFFF"
+                    android:elevation="2dp"
+                    android:orientation="vertical"
+                    android:padding="14dp">
 
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Renan Ber"
-                        android:textColor="#555555" />
-
-                    <TextView
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:background="#EEF0FF"
-                        android:padding="6dp"
-                        android:text="Banco de Dados"
-                        android:textColor="#1A0DAB"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="#EEF0FF"
+                            android:padding="6dp"
+                            android:text="03/06 - 19:15"
+                            android:textColor="#1A0DAB"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:background="#EEEEEE"
+                            android:padding="6dp"
+                            android:text="Auditório"
+                            android:textColor="#666666" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="Inteligência Artificial e Proteção de Dados: Desafios, Ética e Segurança na era Digital."
+                        android:textColor="#111111"
+                        android:textSize="16sp"
                         android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Luiz Fernando Pereira Nunes"
+                            android:textColor="#555555" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="#EEF0FF"
+                            android:padding="6dp"
+                            android:text="Inteligência Artificial"
+                            android:textColor="#1A0DAB"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
 
                 </LinearLayout>
 
