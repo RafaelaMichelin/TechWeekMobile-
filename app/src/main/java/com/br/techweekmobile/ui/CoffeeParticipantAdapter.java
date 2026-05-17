@@ -3,6 +3,7 @@ package com.br.techweekmobile.ui;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -17,6 +18,15 @@ import java.util.List;
 public class CoffeeParticipantAdapter extends RecyclerView.Adapter<CoffeeParticipantAdapter.ViewHolder> {
 
     private List<Participant> participants = new ArrayList<>();
+    private OnDeleteClickListener deleteClickListener;
+
+    public interface OnDeleteClickListener {
+        void onDeleteClick(Participant participant);
+    }
+
+    public void setOnDeleteClickListener(OnDeleteClickListener listener) {
+        this.deleteClickListener = listener;
+    }
 
     public void setParticipants(List<Participant> participants) {
         this.participants = participants;
@@ -37,6 +47,12 @@ public class CoffeeParticipantAdapter extends RecyclerView.Adapter<CoffeePartici
         holder.tvNome.setText(p.getNome());
         holder.tvRa.setText("RA: " + p.getRa());
         holder.tvCurso.setText(p.getCurso() + " - " + p.getSerie());
+
+        holder.btnDelete.setOnClickListener(v -> {
+            if (deleteClickListener != null) {
+                deleteClickListener.onDeleteClick(p);
+            }
+        });
     }
 
     @Override
@@ -46,12 +62,14 @@ public class CoffeeParticipantAdapter extends RecyclerView.Adapter<CoffeePartici
 
     static class ViewHolder extends RecyclerView.ViewHolder {
         TextView tvNome, tvRa, tvCurso;
+        ImageButton btnDelete;
 
         ViewHolder(View itemView) {
             super(itemView);
             tvNome = itemView.findViewById(R.id.tv_nome_participant);
             tvRa = itemView.findViewById(R.id.tv_ra_participant);
             tvCurso = itemView.findViewById(R.id.tv_curso_participant);
+            btnDelete = itemView.findViewById(R.id.btn_delete_participant);
         }
     }
 }

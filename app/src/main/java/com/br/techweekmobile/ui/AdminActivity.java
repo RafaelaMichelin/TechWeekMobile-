@@ -1,9 +1,10 @@
 package com.br.techweekmobile.ui;
 
 import android.os.Bundle;
-
 import android.widget.Button;
+import android.widget.Toast;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -37,6 +38,7 @@ public class AdminActivity extends AppCompatActivity {
         rvParticipants.setLayoutManager(new LinearLayoutManager(this));
         
         adapter = new CoffeeParticipantAdapter();
+        adapter.setOnDeleteClickListener(this::confirmarExclusao);
         rvParticipants.setAdapter(adapter);
 
         btnVoltar = findViewById(R.id.btn_voltar_admin);
@@ -52,6 +54,25 @@ public class AdminActivity extends AppCompatActivity {
                     .getCoffeeBreakParticipants();
             
             runOnUiThread(() -> adapter.setParticipants(lista));
+        });
+    }
+
+    private void confirmarExclusao(Participant participant) {
+        new AlertDialog.Builder(this)
+                .setTitle("Confirmar Exclusão")
+                .setMessage("Deseja realmente remover " + participant.getNome() + " da lista?")
+                .setPositiveButton("Sim", (dialog, which) -> deletarParticipante(participant))
+                .setNegativeButton("Não", null)
+                .show();
+    }
+
+    private void deletarParticipante(Participant participant) {
+        executor.execute(() -> {
+            AppDatabase.getInstance(this).participantDao().delete(participant);
+            runOnUiThread(() -> {
+                Toast.makeText(this, "Participante removido!", Toast.LENGTH_SHORT).show();
+                carregarParticipantesCoffee();
+            });
         });
     }
 
